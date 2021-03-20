@@ -10,7 +10,10 @@ var app = new Vue ({
             ],
             counter: 0
         },
-
+        created: function() {
+            setInterval(this.scorreAvanti, 3000);
+            
+        },
         methods: {
             scorreAvanti: function() {
                 if (this.counter>=this.images.length-1){
@@ -25,6 +28,7 @@ var app = new Vue ({
                 }
                 return this.counter --;
             }
+            
         }
 });
 
